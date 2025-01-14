@@ -55,7 +55,7 @@ const Services = () => {
             <p className='group-hover:text-white text-black max-md:text-sm transition-colors duration-300'>
               {service.description}
             </p>
-            <button class='bg-gray-200 my-4 max-md:my-2 px-4 py-[0.3rem] rounded-[30px] text-[#2124B1] max-md:text-sm'>
+            <button className='bg-gray-200 my-4 max-md:my-2 px-4 py-[0.3rem] rounded-[30px] text-[#2124B1] max-md:text-sm'>
               Read more
             </button>
           </motion.div>

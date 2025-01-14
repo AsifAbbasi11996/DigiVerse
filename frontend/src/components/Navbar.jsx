@@ -40,7 +40,7 @@ const Navbar = () => {
         {/* Hamburger Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className='md:hidden text-[1.5rem] max-md:text-[1.2rem] focus:outline-none'
+          className='md:hidden bg-transparent text-[1.5rem] max-md:text-[1.2rem] focus:outline-none'
         >
           {isMenuOpen ? (
             <FaTimes className='text-[#2d2d2d]' />

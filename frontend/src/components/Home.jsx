@@ -33,13 +33,13 @@ const Home = () => {
           </button>
           <button
             to=''
-            className='border-white hover:bg-white ml-8 max-md:ml-4 px-10 max-md:px-5 py-4 max-md:py-2 border border-solid rounded-[30px] font-semibold text-white max-md:text-[13px] hover:text-black'
+            className='border-white bg-transparent hover:bg-white ml-8 max-md:ml-4 px-10 max-md:px-5 py-4 max-md:py-2 border border-solid rounded-[30px] font-semibold text-white max-md:text-[13px] hover:text-black'
           >
             Contact Us
           </button>
         </div>
         <div className='w-2/4 max-md:w-3/4'>
-          <img className='' src={img} alt='' />
+          <img className='max-md:w-[250px]' src={img} alt='' />
         </div>
       </div>
     </div>
