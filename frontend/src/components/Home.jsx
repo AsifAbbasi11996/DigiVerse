@@ -6,6 +6,16 @@ import bground from '../assets/images/bg-round.png'
 import bgtree from '../assets/images/bg-tree.png'
 
 const Home = () => {
+  const handleScrollToSection = (event, targetId) => {
+    event.preventDefault()
+    const targetElement = document.getElementById(targetId)
+    const offset = 80 // Adjust this value based on your navbar height
+    window.scrollTo({
+      top: targetElement.offsetTop - offset,
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <div
       id='home'
@@ -15,31 +25,34 @@ const Home = () => {
         backgroundPosition: 'bottom, top left, top center, bottom center,right'
       }}
     >
-      <div className='flex max-md:flex-col justify-center items-center gap-10 px-12 max-md:px-0 w-full h-[81vh]'>
+      <div className='flex max-md:flex-col justify-center items-center gap-10 px-12 max-md:px-0 max-xl:px-6 w-full h-[81vh]'>
         <div className='w-2/4 max-md:w-3/4'>
-          <h1 className='font-bold text-[40px] text-white max-md:text-[22px]'>
-            All in one SEO tool need to grow your business rapidly
+          <h1 className='font-bold text-[24px] text-white max-md:text-[18px] max-xl:text-[15px]'>
+            Welcome to DigiVerse
           </h1>
-          <p className='my-8 max-md:my-5 text-[18px] text-white max-md:text-[14px]'>
-            Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet
-            dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam
-            sit justo amet ipsum vero ipsum clita lorem
+          <p className='my-4 max-xl:my-5 text-[16px] text-white max-md:text-[12px] max-xl:text-[14px]'>
+            Your Universe of Digital Possibilities
           </p>
-          <button
-            to=''
-            className='border-white bg-white px-10 max-md:px-5 py-4 max-md:py-2 border border-solid rounded-[30px] font-semibold max-md:text-[13px]'
-          >
-            Free Quote
-          </button>
-          <button
-            to=''
-            className='border-white bg-transparent hover:bg-white ml-8 max-md:ml-4 px-10 max-md:px-5 py-4 max-md:py-2 border border-solid rounded-[30px] font-semibold text-white max-md:text-[13px] hover:text-black'
-          >
-            Contact Us
-          </button>
+          <h1 className='font-bold text-[30px] text-white max-md:text-[22px] max-xl:text-[20px]'>
+            Let's Build Something Amazing Together!
+          </h1>
+          <p className='my-6 max-xl:my-5 text-[16px] text-white max-md:text-[12px] max-xl:text-[14px]'>
+            Hey there! At DigiVerse, we're all about helping businesses like
+            yours grow and shine online. Whether you're just starting out or
+            looking to take your brand to the next level, we've got the
+            expertise and passion to make it happen.
+          </p>
+          <a href='#contact' onClick={e => handleScrollToSection(e, 'contact')}>
+            <button
+              to=''
+              className='border-white bg-transparent hover:bg-white max-md:ml-4 px-10 max-xl:px-5 py-4 max-xl:py-2 border border-solid rounded-[30px] font-semibold text-white max-md:text-[13px] hover:text-black'
+            >
+              Contact Us
+            </button>
+          </a>
         </div>
-        <div className='w-2/4 max-md:w-3/4'>
-          <img className='max-md:w-[250px]' src={img} alt='' />
+        <div className='w-2/4 max-md:w-3/4 max-xl:w-[400px]'>
+          <img className='max-md:w-[250px] max-xl:w-[400px]' src={img} alt='' />
         </div>
       </div>
     </div>

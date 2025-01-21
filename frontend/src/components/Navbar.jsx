@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaBars, FaSearch, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
@@ -31,10 +31,7 @@ const Navbar = () => {
           className='flex items-center space-x-2 font-bold text-4xl max-md:text-2xl'
           onClick={scrollToTop}
         >
-          <FaSearch className='max-md:text-[1.3rem]' />
-          <span>
-            SEO<span className='text-xl max-md:text-[0.9rem]'>Master</span>
-          </span>
+          DigiVerse
         </Link>
 
         {/* Hamburger Button */}
@@ -73,11 +70,11 @@ const Navbar = () => {
             Services
           </a>
           <a
-            href='#projects'
+            href='#whywork'
             className='hover:text-yellow-400 transition duration-200'
-            onClick={e => handleScrollToSection(e, 'projects')}
+            onClick={e => handleScrollToSection(e, 'whywork')}
           >
-            Projects
+            Why Work
           </a>
           <a
             href='#contact'

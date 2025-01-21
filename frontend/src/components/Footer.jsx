@@ -3,7 +3,6 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaSearch
 } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import footerbg from '../assets/images/footer.png'
@@ -32,10 +31,7 @@ const Footer = () => {
               href='/'
               className='flex items-center space-x-2 font-bold text-4xl max-md:text-2xl'
             >
-              <FaSearch className='max-md:w-6 max-md:h-6' />
-              <span>
-                SEO<span className='text-xl max-md:text-sm'>Master</span>
-              </span>
+              DigiVerse
             </a>
             <p className='mt-2 font-medium text-lg text-white max-md:text-sm tracking-wide'>
               Creating modern, scalable, and user-centric solutions to empower

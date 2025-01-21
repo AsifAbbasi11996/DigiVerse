@@ -6,16 +6,28 @@ import { Link } from 'react-router-dom'
 
 const Contact = () => {
   const form = useRef()
-
   const [formStatus, setFormStatus] = useState('')
 
   const sendEmail = e => {
     e.preventDefault()
 
+    // Log environment variables to ensure they are correctly loaded
+    console.log('Service ID:', process.env.REACT_APP_SERVICE_ID)
+    console.log('Template ID:', process.env.REACT_APP_TEMPLATE_ID)
+    console.log('Public Key:', process.env.REACT_APP_PUBLIC_KEY)
+
+    // Log form data to verify before sending
+    const formData = new FormData(form.current)
+    const formValues = {}
+    formData.forEach((value, key) => {
+      formValues[key] = value
+    })
+    console.log('Form Data:', formValues)
+
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
-        'template_vtok587',
+        process.env.REACT_APP_TEMPLATE_ID,
         form.current,
         {
           publicKey: process.env.REACT_APP_PUBLIC_KEY
@@ -74,7 +86,7 @@ const Contact = () => {
             <FaInstagram />
           </Link>
           <Link
-            to='https://wa.me/8788238470'
+            to='https://wa.me/7758049221'
             target='_blank'
             rel='noopener noreferrer'
             className='text-2xl max-md:text-xl hover:text-green-500'
@@ -171,7 +183,7 @@ const Contact = () => {
             whileHover={{ scale: 1.05 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
+            transition={{ duration: 0.3, delay: 0.6 }}
           >
             Send Message
           </motion.button>
