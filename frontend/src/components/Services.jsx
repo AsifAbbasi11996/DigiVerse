@@ -25,7 +25,6 @@ const Services = () => {
       try {
         const response = await getAllServices() // Your API endpoint to get services
         setServices(response) // Set services data from the API
-        console.log(response)
       } catch (error) {
         console.log(error)
       }

@@ -11,18 +11,12 @@ const Contact = () => {
   const sendEmail = e => {
     e.preventDefault()
 
-    // Log environment variables to ensure they are correctly loaded
-    console.log('Service ID:', process.env.REACT_APP_SERVICE_ID)
-    console.log('Template ID:', process.env.REACT_APP_TEMPLATE_ID)
-    console.log('Public Key:', process.env.REACT_APP_PUBLIC_KEY)
-
     // Log form data to verify before sending
     const formData = new FormData(form.current)
     const formValues = {}
     formData.forEach((value, key) => {
       formValues[key] = value
     })
-    console.log('Form Data:', formValues)
 
     emailjs
       .sendForm(

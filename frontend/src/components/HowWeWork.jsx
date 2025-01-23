@@ -11,7 +11,7 @@ const HowWeWork = () => {
           try {
             const response = await getAllHowWorks() // Your API endpoint to get services
             setSteps(response) // Set services data from the API
-            console.log(response)
+          
           } catch (error) {
             console.log(error)
           }

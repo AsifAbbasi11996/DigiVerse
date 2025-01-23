@@ -120,14 +120,14 @@ const Navbar = () => {
             Services
           </a>
           <a
-            href='#projects'
+            href='#whywork'
             className='block px-4 py-2 font-semibold text-black hover:text-[#2124B1]'
             onClick={e => {
               setIsMenuOpen(false)
-              handleScrollToSection(e, 'projects')
+              handleScrollToSection(e, 'whywork')
             }}
           >
-            Projects
+            Why Work
           </a>
           <a
             href='#contact'

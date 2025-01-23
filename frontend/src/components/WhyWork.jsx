@@ -11,7 +11,6 @@ const WhyWork = () => {
         try {
           const response = await getAllWorks() // Your API endpoint to get services
           setReasons(response) // Set services data from the API
-          console.log(response)
         } catch (error) {
           console.log(error)
         }
