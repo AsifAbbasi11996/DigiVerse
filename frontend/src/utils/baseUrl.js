@@ -1,1 +1,1 @@
-export const baseUrl = 'http://localhost:8000/api'
+export const baseUrl = 'https://digiverse-backend-production.up.railway.app/api'
