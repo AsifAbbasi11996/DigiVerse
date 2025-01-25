@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { motion } from 'framer-motion'
-import { FaFacebookF, FaInstagram, FaPhone, FaWhatsapp } from 'react-icons/fa'
+import { FaInstagram, FaPhone, FaWhatsapp } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 const Contact = () => {
@@ -63,22 +63,14 @@ const Contact = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <Link
-            to='https://www.facebook.com'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='text-2xl max-md:text-xl hover:text-yellow-400'
-          >
-            <FaFacebookF />
-          </Link>
-          <Link
+          {/* <Link
             to='https://www.instagram.com'
             target='_blank'
             rel='noopener noreferrer'
             className='text-2xl max-md:text-xl hover:text-pink-500'
           >
             <FaInstagram />
-          </Link>
+          </Link> */}
           <Link
             to='https://wa.me/7758049221'
             target='_blank'
